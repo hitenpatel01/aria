@@ -1,0 +1,12 @@
+[package]
+name = "aria"
+version = "0.1.0"
+edition = "2021"
+authors = ["Hiten Patel"]
+description = "A market monitoring application"
+
+[dependencies]
+clap = { version = "4.5.13", features = ["derive"] }
+config = "0.14.0"
+log = { version = "0.4.22" }
+log4rs = { version = "1.3.0", features = ["all_components"] }
