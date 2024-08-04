@@ -1,5 +1,6 @@
-use std::fmt;
 use clap::Parser;
+use once_cell::sync::Lazy;
+use std::fmt;
 
 #[derive(Debug, Clone, clap::ValueEnum)]
 pub enum Environment {
@@ -22,3 +23,5 @@ pub struct Args {
     #[arg(short, long, value_enum)]
     pub env: Environment
 }
+
+pub static ARGS: Lazy<Args> = Lazy::new(|| Args::parse());
