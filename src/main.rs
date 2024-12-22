@@ -12,9 +12,9 @@ fn main() {
     log4rs::init_file("log4rs.yml", Default::default()).unwrap();
     log::info!("Running with following arguments:\n{:#?}", args::ARGS);
 
-    let market_data_cached = SETTINGS.get_bool("market_data.cached").unwrap();
-    let market_data_cache_location = SETTINGS.get_string("market_data.cache.location").unwrap();
-    log::info!("Market Data: Cached = {market_data_cached}, Location =  {market_data_cache_location}");
+    let data_cached = SETTINGS.get_bool("data.cached").unwrap();
+    let data_cache_location = SETTINGS.get_string("data.cache.location").unwrap();
+    log::info!("Data: Cached = {data_cached}, Location =  {data_cache_location}");
 
     loop {
         println!("Hello there!");

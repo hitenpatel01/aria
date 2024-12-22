@@ -1,1 +1,1 @@
-market_data.cache.location = '/data/market_data'
+data.cache.location = '/data/cache'
